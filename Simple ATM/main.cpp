@@ -8,7 +8,7 @@ double depositt(double orgBalance, double depositAmount);
 int main(){
     using namespace std;
 
-    char end;
+    string end;
     double balance = 600.00;
     double widthraw;
     double deposit;
@@ -47,13 +47,15 @@ int main(){
 //------------------------------------------------------------------
         case 4:
             cout << "Are you Sure??Y/N\n";
-            cin >> end;
-            if (end == 'N' || end == 'n'){
+            getline(cin >> ws, end);
+
+            if (end == "N" || end == "n"){
                 break;
-            }else if (end == 'Y' || end == 'y'){
+            }else if (end == "Y" || end == "y"){
                 on = false;
                 break;
-            }else
+            }else if(end == "Pretty Sure.")
+                cout << "Threw a Thrash Bag, Into a Space\n";
                 break;
 //------------------------------------------------------------------        
         default:
