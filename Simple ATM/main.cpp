@@ -18,33 +18,34 @@ int main(){
 
 
     cout << "Welcome to the Banking app\n";
+
     while(on == true){
         cout << "----------Bank----------\n";
         cout << "What action do you want\n" << "1. Widthraw\n2. Deposit\n3. Show balance\n4. END\n";
         cout << ">>>";
         cin >> action;
         switch (action){
-//------------------------------------------------------------------            
+//------WIDTHRAW------------------------------------------------------------            
         case 1:
             cout << "\nHow much do you want to widthraw: ";
             cin >> widthraw;
             cout << "\nYour Balance now: " << balance << "\n\n";
             balance = withdraww(balance, widthraw);
-            cout << "Your Balance after widthraw: " << balance << "\n\n";
+            cout << "Your Balance after: " << balance << "\n\n";
             break;
-//------------------------------------------------------------------
+//------DEPOSIT------------------------------------------------------------
         case 2:
             cout << "\nHow much do you want to deposit: ";
             cin >> deposit;
             cout << "\nYour Balance now: " << balance << "\n\n";
             balance = depositt(balance, deposit);
-            cout << "Your Balance after widthraw: " << balance << "\n\n";
+            cout << "Your Balance after: " << balance << "\n\n";
             break;
-//------------------------------------------------------------------
+//------BALANCE------------------------------------------------------------
         case 3:
             cout << "\nYour balance: " << balance << "\n\n";
             break;
-//------------------------------------------------------------------
+//------EXIT------------------------------------------------------------
         case 4:
             cout << "Are you Sure??Y/N\n";
             getline(cin >> ws, end);
@@ -57,7 +58,7 @@ int main(){
             }else if(end == "Pretty Sure.")
                 cout << "Threw a Thrash Bag, Into a Space\n";
                 break;
-//------------------------------------------------------------------        
+//------WRONG-NUMBER------------------------------------------------------------        
         default:
         cout << "\nWrong choice\n\n";
             break;
@@ -74,8 +75,13 @@ int main(){
 double withdraww(double orgBalance, double widthrawAmount){
     double newBalance;
     newBalance = orgBalance - widthrawAmount;
-
-    return newBalance;
+    
+    if(newBalance < 0){
+        std::cout << "Insufficient Funds\n";
+        return orgBalance;
+    }else{
+        return newBalance;
+    }   
 }
 
 double depositt(double orgBalance, double depositAmount){
