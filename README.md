@@ -42,4 +42,4 @@ Make sure you have MSYS2 installed and that you're using the ucrt64 toolchain:
 
 You can then build the program directly in Visual Studio Code using the provided tasks.json configuration.
 
-##You're welcome to use, adapt, or build upon this code for your own learning or development.
+## You're welcome to use, adapt, or build upon this code for your own learning or development.
