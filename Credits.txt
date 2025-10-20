@@ -1,10 +1,10 @@
 ═══════════════════════════════════════════════
-             🌟 SPECIAL THANKS 🌟
+             🌟 CREDITS 🌟
 ═══════════════════════════════════════════════
 
 👤 Autor: ItzSoftTheFox
 📅 Date: 19. October 2025
-🌍 Lokalita: Czech Republic
+🌍 Made in Czech Republic
 
 ═══════════════════════════════════════════════
              🔧 TOOLS USED 🔧
@@ -13,10 +13,9 @@
 🖥️ Language: C++  
 
 ═══════════════════════════════════════════════
-             📬 KONTAKT 📬
+             📬 CONTACT 📬
 ═══════════════════════════════════════════════
 
-📧 Email: itzsoftthefox@example.com
 🐾 Discord: Natsuki Subaru (Legoshi#9285)
 
 ═══════════════════════════════════════════════

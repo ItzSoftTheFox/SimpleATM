@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 //Banking program
 //deposit, withdraw, show balance
 
@@ -24,6 +25,16 @@ int main(){
         cout << "What action do you want\n" << "1. Widthraw\n2. Deposit\n3. Show balance\n4. END\n";
         cout << ">>>";
         cin >> action;
+//------INPUTCHECKER------------------------------------------------------------
+        if(cin.fail()){
+            // Neplatný vstup (např. písmeno)
+            cin.clear(); // resetuje chybu
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignoruj všechno, co zbylo ve vstupním bufferu až do konce řádku
+
+            cout << "\nPleas enter whole number\n\n";
+            continue;
+        }
+
         switch (action){
 //------WIDTHRAW------------------------------------------------------------            
         case 1:
@@ -47,7 +58,7 @@ int main(){
             break;
 //------EXIT------------------------------------------------------------
         case 4:
-            cout << "Are you Sure??Y/N\n";
+            cout << "Are you Sure?? (Y/N)\n";
             getline(cin >> ws, end);
 
             if (end == "N" || end == "n"){
@@ -55,16 +66,20 @@ int main(){
             }else if (end == "Y" || end == "y"){
                 on = false;
                 break;
-            }else if(end == "Pretty Sure.")
+            }else if(end == "Pretty Sure."){
                 cout << "Threw a Thrash Bag, Into a Space\n";
+                on = false;
                 break;
+            }else{
+                cout << "\nY or N only please\n";
+            }
 //------WRONG-NUMBER------------------------------------------------------------        
         default:
         cout << "\nWrong choice\n\n";
             break;
         }
-//------------------------------------------------------------------
     }
+    //------------------------------------------------------------------
 
     cout << "Thanks for using our program <3";
 
@@ -77,7 +92,7 @@ double withdraww(double orgBalance, double widthrawAmount){
     newBalance = orgBalance - widthrawAmount;
     
     if(newBalance < 0){
-        std::cout << "Insufficient Funds\n";
+        std::cout << "Insufficient Funds\n\n";
         return orgBalance;
     }else{
         return newBalance;
