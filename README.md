@@ -2,7 +2,9 @@
 This is a simple console-based banking application written in C++. It allows users to:
 
 --Deposit money
+
 --Withdraw money
+
 --View current balance
 
 The program starts with a default balance of 600.00.
