@@ -24,12 +24,15 @@ To run this program, you’ll need the following:
 
 ## How to run
 (BASH)Open a terminal in the folder where main.cpp is located and run: 
+
     g++ -std=c++11 -o banking main.cpp
 
-After successful compilation, run the executable: 
+After successful compilation, run the executable:
+
     ./banking
 
 On Windows: 
+
     banking.exe
 
 ## GCC via MSYS2
